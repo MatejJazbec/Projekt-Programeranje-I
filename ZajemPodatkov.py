@@ -82,9 +82,9 @@ def pocisti_umetnino(umetnina):
     podatki['id'] = podatki['id']
 
     if r'</span>' not in podatki['lokacija']:
-        podatki['lokacija'] = ''
+        podatki['lokacija'] = ('','')
     elif 'View by appointment' in podatki['lokacija']:
-        podatki['lokacija'] = 'View by appointment'
+        podatki['lokacija'] = ('View by appointment','')
     else:
         new_string = ''
         m = podatki['lokacija']
